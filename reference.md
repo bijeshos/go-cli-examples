@@ -1,0 +1,2 @@
+- `./go-cli help`
+- `./go-cli version`
