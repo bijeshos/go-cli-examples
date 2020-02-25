@@ -5,7 +5,5 @@ import (
 )
 
 func main() {
-	//fmt.Println("test")
-	//cmd.Healthcheck()
 	cmd.Execute()
 }
