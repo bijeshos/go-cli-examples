@@ -16,10 +16,5 @@ var initCmd = &cobra.Command{
 	Long:  `initialize go-cli with options`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("go-cli v0.0.1-alpha")
-
-		/*var conf string
-		conf, _ = rootCmd.Flags().GetString("config")
-		fmt.Println("config:", conf)
-		*/
 	},
 }
