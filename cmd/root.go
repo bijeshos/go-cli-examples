@@ -11,8 +11,7 @@ import (
 
 var (
 	// Used for flags.
-	cfgFile     string
-	userLicense string
+	cfgFile string
 
 	rootCmd = &cobra.Command{
 		Use:   "go-cli",
@@ -30,16 +29,7 @@ func init() {
 	cobra.OnInitialize(initConfig)
 
 	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.go-cli.yaml)")
-	rootCmd.PersistentFlags().StringP("author", "a", "YOUR NAME", "Bijesh O S")
-	rootCmd.PersistentFlags().StringVarP(&userLicense, "license", "l", "", "MIT License")
-	rootCmd.PersistentFlags().Bool("viper", true, "use Viper for configuration")
-	viper.BindPFlag("author", rootCmd.PersistentFlags().Lookup("author"))
-	viper.BindPFlag("useViper", rootCmd.PersistentFlags().Lookup("viper"))
-	viper.SetDefault("author", "Bijesh O S <@bijeshos>")
-	viper.SetDefault("license", "MIT")
 
-	rootCmd.AddCommand(addCmd)
-	rootCmd.AddCommand(initCmd)
 }
 
 func er(msg interface{}) {
@@ -48,6 +38,11 @@ func er(msg interface{}) {
 }
 
 func initConfig() {
+	fmt.Println("inside initConfig")
+	var conf string
+	conf, _ = rootCmd.Flags().GetString("config")
+	fmt.Println("config:", conf)
+
 	if cfgFile != "" {
 		// Use config file from the flag.
 		viper.SetConfigFile(cfgFile)
@@ -68,22 +63,4 @@ func initConfig() {
 	if err := viper.ReadInConfig(); err == nil {
 		fmt.Println("Using config file:", viper.ConfigFileUsed())
 	}
-}
-
-var addCmd = &cobra.Command{
-	Use:   "add",
-	Short: "Print the version number of go-cli",
-	Long:  `Print the version number of go-cli sample application`,
-	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("executing add")
-	},
-}
-
-var initCmd = &cobra.Command{
-	Use:   "init",
-	Short: "Print the version number of go-cli",
-	Long:  `Print the version number of go-cli sample application`,
-	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("executing init")
-	},
 }
