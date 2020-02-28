@@ -14,7 +14,7 @@ var (
 	cfgFile string
 
 	rootCmd = &cobra.Command{
-		Use:   "go-cli",
+		Use:   "deployer-cli",
 		Short: "A sample CLI application",
 		Long:  `A sample CLI application written in Go`,
 	}
@@ -55,7 +55,7 @@ func initConfig() {
 
 		// Search config in home directory with name ".cobra" (without extension).
 		viper.AddConfigPath(home)
-		viper.SetConfigName(".go-cli")
+		viper.SetConfigName(".deployer-cli")
 	}
 
 	viper.AutomaticEnv()
