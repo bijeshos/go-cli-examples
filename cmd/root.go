@@ -14,7 +14,7 @@ var (
 	cfgFile string
 
 	rootCmd = &cobra.Command{
-		Use:   "deployer-cli",
+		Use:   "go-cli-demo",
 		Short: "A sample CLI application",
 		Long:  `A sample CLI application written in Go`,
 	}
@@ -28,7 +28,7 @@ func Execute() error {
 func init() {
 	cobra.OnInitialize(initConfig)
 
-	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.go-cli.yaml)")
+	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.go-cli-demo.yaml)")
 
 }
 
@@ -38,10 +38,10 @@ func er(msg interface{}) {
 }
 
 func initConfig() {
-	fmt.Println("inside initConfig")
-	var conf string
-	conf, _ = rootCmd.Flags().GetString("config")
-	fmt.Println("config:", conf)
+	//fmt.Println("inside initConfig")
+	//var conf string
+	//conf, _ = rootCmd.Flags().GetString("config")
+	//fmt.Println("config:", conf)
 
 	if cfgFile != "" {
 		// Use config file from the flag.
@@ -55,7 +55,7 @@ func initConfig() {
 
 		// Search config in home directory with name ".cobra" (without extension).
 		viper.AddConfigPath(home)
-		viper.SetConfigName(".deployer-cli")
+		viper.SetConfigName(".go-cli-demo")
 	}
 
 	viper.AutomaticEnv()
