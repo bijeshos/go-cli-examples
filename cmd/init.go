@@ -12,9 +12,9 @@ func init() {
 
 var initCmd = &cobra.Command{
 	Use:   "init",
-	Short: "initialize go-cli",
-	Long:  `initialize go-cli with options`,
+	Short: "initialize go-cli-demo",
+	Long:  `initialize go-cli-demo with options`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("go-cli v0.0.1-alpha")
+		fmt.Println("go-cli-demo v0.0.1-alpha")
 	},
 }
