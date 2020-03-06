@@ -1,12 +1,12 @@
-- `./go-cli help`
-- `./go-cli version`
+- `./go-cli-demo help`
+- `./go-cli-demo version`
 
 - `go build`
-- `./go-cli version --config testconfig`
-- `./go-cli version`
+- `./go-cli-demo version --config testconfig`
+- `./go-cli-demo version`
 - `./go build -o myclt`
-- `./go-cli help deploy`
-- `./go-cli deploy help`
-- `./go-cli help`
+- `./go-cli-demo help deploy`
+- `./go-cli-demo deploy help`
+- `./go-cli-demo help`
 
 
