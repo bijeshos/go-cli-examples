@@ -10,6 +10,7 @@ func init() {
 	rootCmd.AddCommand(deployCmd)
 
 	deployCmd.AddCommand(deployWebCmd)
+	deployCmd.AddCommand(deployDatabaseCmd)
 
 }
 
@@ -29,5 +30,14 @@ var deployWebCmd = &cobra.Command{
 	Long:  `deploy web`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("executing deploy:web")
+	},
+}
+
+var deployDatabaseCmd = &cobra.Command{
+	Use:   "database",
+	Short: "deploy database",
+	Long:  `deploy database`,
+	Run: func(cmd *cobra.Command, args []string) {
+		fmt.Println("executing deploy:database")
 	},
 }
