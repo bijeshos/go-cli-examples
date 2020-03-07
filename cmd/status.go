@@ -14,9 +14,9 @@ func init() {
 }
 
 var getCmd = &cobra.Command{
-	Use:   "get",
-	Short: "get deployed artifacts",
-	Long:  `get deployed artifacts details`,
+	Use:   "status",
+	Short: "status of deployed artifacts",
+	Long:  `status of deployed artifacts details`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("executing get")
 	},
