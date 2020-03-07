@@ -16,16 +16,16 @@ func init() {
 var getCmd = &cobra.Command{
 	Use:   "status",
 	Short: "status of deployed artifacts",
-	Long:  `status of deployed artifacts details`,
+	Long:  `status of deployed artifacts`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("executing get")
+		fmt.Println("executing status command")
 	},
 }
 
 var getServicesCmd = &cobra.Command{
-	Use:   "services",
-	Short: "get services details",
-	Long:  `get services details and configs`,
+	Use:   "web",
+	Short: "status of web deployment",
+	Long:  `status of web deployment`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("executing get:services")
 	},
