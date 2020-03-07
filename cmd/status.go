@@ -7,13 +7,13 @@ import (
 )
 
 func init() {
-	rootCmd.AddCommand(getCmd)
+	rootCmd.AddCommand(statusCmd)
 
-	getCmd.AddCommand(getServicesCmd)
-	getCmd.AddCommand(getJobsCmd)
+	statusCmd.AddCommand(statusWebCmd)
+	statusCmd.AddCommand(statusDatabaseCmd)
 }
 
-var getCmd = &cobra.Command{
+var statusCmd = &cobra.Command{
 	Use:   "status",
 	Short: "status of deployed artifacts",
 	Long:  `status of deployed artifacts`,
@@ -22,7 +22,7 @@ var getCmd = &cobra.Command{
 	},
 }
 
-var getServicesCmd = &cobra.Command{
+var statusWebCmd = &cobra.Command{
 	Use:   "web",
 	Short: "status of web deployment",
 	Long:  `status of web deployment`,
@@ -31,11 +31,11 @@ var getServicesCmd = &cobra.Command{
 	},
 }
 
-var getJobsCmd = &cobra.Command{
+var statusDatabaseCmd = &cobra.Command{
 	Use:   "database",
 	Short: "status of database deployment",
 	Long:  `status of database deployment`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("executing get:jobs")
+		fmt.Println("executing status:database")
 	},
 }
