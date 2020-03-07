@@ -27,14 +27,14 @@ var getServicesCmd = &cobra.Command{
 	Short: "status of web deployment",
 	Long:  `status of web deployment`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("executing get:services")
+		fmt.Println("executing status:web")
 	},
 }
 
 var getJobsCmd = &cobra.Command{
-	Use:   "jobs",
-	Short: "get job details",
-	Long:  `get job details and configs`,
+	Use:   "database",
+	Short: "status of database deployment",
+	Long:  `status of database deployment`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("executing get:jobs")
 	},
