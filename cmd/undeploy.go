@@ -10,6 +10,7 @@ func init() {
 	rootCmd.AddCommand(undeployCmd)
 
 	undeployCmd.AddCommand(undeployWebCmd)
+	undeployCmd.AddCommand(undeployDatabaseCmd)
 
 }
 
@@ -29,5 +30,14 @@ var undeployWebCmd = &cobra.Command{
 	Long:  `undeploy web`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("executing undeploy:web")
+	},
+}
+
+var undeployDatabaseCmd = &cobra.Command{
+	Use:   "database",
+	Short: "undeploy database",
+	Long:  `undeploy database`,
+	Run: func(cmd *cobra.Command, args []string) {
+		fmt.Println("executing undeploy:database")
 	},
 }
