@@ -14,9 +14,9 @@ var (
 	cfgFile string
 
 	rootCmd = &cobra.Command{
-		Use:   "go-cli-demo",
-		Short: "A sample CLI application",
-		Long:  `A sample CLI application written in Go`,
+		Use:   "deployer",
+		Short: "deployer: A sample CLI application",
+		Long:  `deployer: A sample CLI application written in Go`,
 	}
 )
 
@@ -38,10 +38,6 @@ func er(msg interface{}) {
 }
 
 func initConfig() {
-	//fmt.Println("inside initConfig")
-	//var conf string
-	//conf, _ = rootCmd.Flags().GetString("config")
-	//fmt.Println("config:", conf)
 
 	if cfgFile != "" {
 		// Use config file from the flag.
