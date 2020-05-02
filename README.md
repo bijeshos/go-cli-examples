@@ -1,4 +1,4 @@
-# go-cli-demo
-An example CLI implementation using Go
+# Go CLI Examples
+A set of CLI implementations using Go
 
 ** work in progress **
