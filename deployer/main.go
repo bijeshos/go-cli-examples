@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/bijeshos/go-cli-demo/cmd"
+	"github.com/bijeshos/go-cli-examples/deployer/cmd"
 )
 
 func main() {
