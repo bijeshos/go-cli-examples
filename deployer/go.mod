@@ -1,4 +1,4 @@
-module github.com/bijeshos/go-cli-demo
+module github.com/bijeshos/go-cli-examples/deployer
 
 go 1.14
 
