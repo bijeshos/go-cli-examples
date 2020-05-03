@@ -12,9 +12,9 @@ func init() {
 
 var versionCmd = &cobra.Command{
 	Use:   "version",
-	Short: "Print the version number of go-cli-demo",
-	Long:  `Print the version number of go-cli-demo sample application`,
+	Short: "Print the version number of deployer",
+	Long:  `Print the version number of deployer sample application`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("go-cli-demo v0.0.1-alpha")
+		fmt.Println("deployer v0.0.1-alpha")
 	},
 }
