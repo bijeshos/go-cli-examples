@@ -10,6 +10,7 @@ func init() {
 	rootCmd.AddCommand(undeployCmd)
 
 	undeployCmd.AddCommand(undeployWebCmd)
+	undeployCmd.AddCommand(undeployAPICmd)
 	undeployCmd.AddCommand(undeployDatabaseCmd)
 
 }
@@ -19,9 +20,6 @@ var undeployCmd = &cobra.Command{
 	Aliases: []string{"undep", "undepl"},
 	Short:   "undeploy apps",
 	Long:    `undeploy apps`,
-	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("executing undeploy")
-	},
 }
 
 var undeployWebCmd = &cobra.Command{
@@ -29,7 +27,18 @@ var undeployWebCmd = &cobra.Command{
 	Short: "undeploy web",
 	Long:  `undeploy web`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("executing undeploy:web")
+		// *** add code to invoke automation end points below ***
+		fmt.Println("Executing 'deployer undeploy web' placeholder command")
+	},
+}
+
+var undeployAPICmd = &cobra.Command{
+	Use:   "api",
+	Short: "undeploy api",
+	Long:  `undeploy api`,
+	Run: func(cmd *cobra.Command, args []string) {
+		// *** add code to invoke automation end points below ***
+		fmt.Println("Executing 'deployer undeploy api' placeholder command")
 	},
 }
 
@@ -38,6 +47,7 @@ var undeployDatabaseCmd = &cobra.Command{
 	Short: "undeploy database",
 	Long:  `undeploy database`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("executing undeploy:database")
+		// *** add code to invoke automation end points below ***
+		fmt.Println("Executing 'deployer undeploy database' placeholder command")
 	},
 }
