@@ -27,8 +27,7 @@ func Execute() error {
 
 func init() {
 	cobra.OnInitialize(initConfig)
-
-	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.go-cli-demo.yaml)")
+	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.deployer.yaml)")
 
 }
 
@@ -49,9 +48,8 @@ func initConfig() {
 			er(err)
 		}
 
-		// Search config in home directory with name ".cobra" (without extension).
 		viper.AddConfigPath(home)
-		viper.SetConfigName(".go-cli-demo")
+		viper.SetConfigName(".deployer")
 	}
 
 	viper.AutomaticEnv()
