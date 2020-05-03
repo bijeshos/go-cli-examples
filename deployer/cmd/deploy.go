@@ -10,6 +10,7 @@ func init() {
 	rootCmd.AddCommand(deployCmd)
 
 	deployCmd.AddCommand(deployWebCmd)
+	deployCmd.AddCommand(deployAPICmd)
 	deployCmd.AddCommand(deployDatabaseCmd)
 
 }
@@ -19,9 +20,6 @@ var deployCmd = &cobra.Command{
 	Aliases: []string{"dep", "depl"},
 	Short:   "deploy apps",
 	Long:    `deploy apps`,
-	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("executing deploy")
-	},
 }
 
 var deployWebCmd = &cobra.Command{
@@ -29,7 +27,18 @@ var deployWebCmd = &cobra.Command{
 	Short: "deploy web",
 	Long:  `deploy web`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("executing deploy:web")
+		// *** add code to invoke automation end points below ***
+		fmt.Println("Executing 'deployer deploy web' placeholder command")
+	},
+}
+
+var deployAPICmd = &cobra.Command{
+	Use:   "api",
+	Short: "deploy api",
+	Long:  `deploy api`,
+	Run: func(cmd *cobra.Command, args []string) {
+		// *** add code to invoke automation end points below ***
+		fmt.Println("Executing 'deployer deploy api' placeholder command")
 	},
 }
 
@@ -38,6 +47,7 @@ var deployDatabaseCmd = &cobra.Command{
 	Short: "deploy database",
 	Long:  `deploy database`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("executing deploy:database")
+		// *** add code to invoke automation end points below ***
+		fmt.Println("Executing 'deployer deploy database' placeholder command")
 	},
 }
