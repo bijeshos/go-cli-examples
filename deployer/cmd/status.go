@@ -16,14 +16,14 @@ func init() {
 
 var statusCmd = &cobra.Command{
 	Use:   "status",
-	Short: "status of deployed artifacts",
-	Long:  `status of deployed artifacts`,
+	Short: "Check status of deployed artifacts (web, api or database)",
+	Long:  `This command can be used together with web, api or database sub-commands to check status of respective deployments`,
 }
 
 var statusWebCmd = &cobra.Command{
 	Use:   "web",
-	Short: "status of web deployment",
-	Long:  `status of web deployment`,
+	Short: "Check status of web deployment",
+	Long:  `This command can be used to status of web deployment`,
 	Run: func(cmd *cobra.Command, args []string) {
 		// *** add code to invoke automation end points below ***
 		fmt.Println("Executing 'deployer status web' placeholder command")
@@ -32,8 +32,8 @@ var statusWebCmd = &cobra.Command{
 
 var statusAPICmd = &cobra.Command{
 	Use:   "api",
-	Short: "status api",
-	Long:  `status api`,
+	Short: "Check status of API deployment",
+	Long:  `This command can be used to status of API deployment`,
 	Run: func(cmd *cobra.Command, args []string) {
 		// *** add code to invoke automation end points below ***
 		fmt.Println("Executing 'deployer status api' placeholder command")
@@ -42,8 +42,8 @@ var statusAPICmd = &cobra.Command{
 
 var statusDatabaseCmd = &cobra.Command{
 	Use:   "database",
-	Short: "status of database deployment",
-	Long:  `status of database deployment`,
+	Short: "Check status of database deployment",
+	Long:  `This command can be used to status of database deployment`,
 	Run: func(cmd *cobra.Command, args []string) {
 		// *** add code to invoke automation end points below ***
 		fmt.Println("Executing 'deployer status database' placeholder command")
