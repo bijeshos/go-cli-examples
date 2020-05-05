@@ -7,6 +7,7 @@ At the moment, this repo has one sample implementation: **deployer**. It is a sc
 
 # Building the project
 
+- Go to **deployer** sub directory
 - On Linux, go to a terminal and execute the following:
    - `$ go build -o build/deployer`
      - This will create an executable called deployer in build sub directory.
@@ -23,6 +24,8 @@ At the moment, this repo has one sample implementation: **deployer**. It is a sc
     - `$ env GOOS=windows GOARCH=amd64 go build -o build/deployer.exe`
 
 # Execution
+Go to **deployer/build** sub directory.
+
 On Linx
 - `$ ./deployer help`
 - `$ ./deployer deploy help`
