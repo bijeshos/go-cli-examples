@@ -10,13 +10,13 @@ import (
 )
 
 var (
-	// Used for flags.
+	// This is used for config file
 	cfgFile string
 
 	rootCmd = &cobra.Command{
 		Use:   "deployer",
 		Short: "deployer: A sample CLI application",
-		Long:  `deployer: A sample CLI application written in Go`,
+		Long:  `deployer: A sample CLI application written in Go as an entry point for the imaginary deployment automation tool`,
 	}
 )
 
@@ -39,10 +39,10 @@ func er(msg interface{}) {
 func initConfig() {
 
 	if cfgFile != "" {
-		// Use config file from the flag.
+		// Use config file from the flag
 		viper.SetConfigFile(cfgFile)
 	} else {
-		// Find home directory.
+		// Find home directory
 		home, err := homedir.Dir()
 		if err != nil {
 			er(err)
