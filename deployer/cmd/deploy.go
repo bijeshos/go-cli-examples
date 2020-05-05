@@ -18,14 +18,14 @@ func init() {
 var deployCmd = &cobra.Command{
 	Use:     "deploy",
 	Aliases: []string{"dep", "depl"},
-	Short:   "deploy apps",
-	Long:    `deploy apps`,
+	Short:   "Deploy artifacts (web, api or database)",
+	Long:    `This command can be used together with web, api or database sub-commands to deploy respective artifacts`,
 }
 
 var deployWebCmd = &cobra.Command{
 	Use:   "web",
-	Short: "deploy web",
-	Long:  `deploy web`,
+	Short: "Deploy web artifacts",
+	Long:  `This command can be used to deploy web artifacts`,
 	Run: func(cmd *cobra.Command, args []string) {
 		// *** add code to invoke automation end points below ***
 		fmt.Println("Executing 'deployer deploy web' placeholder command")
@@ -34,8 +34,8 @@ var deployWebCmd = &cobra.Command{
 
 var deployAPICmd = &cobra.Command{
 	Use:   "api",
-	Short: "deploy api",
-	Long:  `deploy api`,
+	Short: "Deploy API artifacts",
+	Long:  `This command can be used to deploy API artifacts`,
 	Run: func(cmd *cobra.Command, args []string) {
 		// *** add code to invoke automation end points below ***
 		fmt.Println("Executing 'deployer deploy api' placeholder command")
@@ -44,8 +44,8 @@ var deployAPICmd = &cobra.Command{
 
 var deployDatabaseCmd = &cobra.Command{
 	Use:   "database",
-	Short: "deploy database",
-	Long:  `deploy database`,
+	Short: "Deploy database artifacts",
+	Long:  `This command can be used to deploy database artifacts`,
 	Run: func(cmd *cobra.Command, args []string) {
 		// *** add code to invoke automation end points below ***
 		fmt.Println("Executing 'deployer deploy database' placeholder command")
