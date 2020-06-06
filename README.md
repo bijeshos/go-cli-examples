@@ -1,11 +1,12 @@
 # Go CLI Examples
 This repository contains a sample Command Line Interface implementaion using Go. 
 
-For more details about this repo, refer to the following article on Medium:
-- [Building Command Line Interfaces using Go](https://medium.com/swlh/building-command-line-interfaces-using-go-ce6a75d60bf5)
 
 # Projects
 At the moment, this repo has one sample implementation: **deployer**. It is a scaffoling for an imaginary deployment automation tool for a 3-tier application, which has Web, API and Database artifacts to deploy. This CLI will act as an entry point for the automation actions such as deploy, undeploy and status check. 
+
+For more details about this project, refer to the following article on Medium:
+- [Building Command Line Interfaces using Go](https://medium.com/swlh/building-command-line-interfaces-using-go-ce6a75d60bf5)
 
 
 # Building the project
